@@ -1,5 +1,3 @@
-package bmon;
-
 /**
  *
  * @author <a href="mailto:jhazelle@asu.edu">Justin Hazelle</a>

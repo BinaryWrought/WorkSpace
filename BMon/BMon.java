@@ -1,9 +1,3 @@
-/*
- * This is free to use as it was only made for practice.
- */
-
-package bmon;
-
 /**
  *
  * @author <a href="mailto:jhazelle@asu.edu">Justin Hazelle</a>
