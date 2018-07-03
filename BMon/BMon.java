@@ -1,3 +1,6 @@
+
+import java.util.Arrays;
+
 /**
  *
  * @author <a href="mailto:jhazelle@asu.edu">Justin Hazelle</a>
@@ -12,6 +15,9 @@ public class BMon
     public static void main( String[] args ) 
     {
         TypeMatchUps tmu = new TypeMatchUps();             
-        tmu.printAllDualTypes( false );
-	}
+        //tmu.printAllDualTypes( false );
+        System.out.println( "D/N: " + Arrays.toString( tmu.getDualType( Elements.DARK, Elements.NEUTRAL ) ) );
+        System.out.println( "L/N: " + Arrays.toString( tmu.getDualType( Elements.LIGHT, Elements.NEUTRAL ) ) );
+        System.out.println( "D/L: " + Arrays.toString( tmu.getDualType( Elements.DARK, Elements.LIGHT ) ) );
+    }
 }

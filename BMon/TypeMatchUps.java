@@ -11,26 +11,19 @@ public class TypeMatchUps
 {
     
     // These arrays represent defense
-    // For example a FIRE type is attacked by FIRE = 0, by WATER = 1, by PLANT = -1 ... etc
     // Types are balanced such that each type has 3 strengths, 3 neutrals, and 3 weaknesses
     // This makes all single types have a net power of zero ( 0 + 0 + 0 + 1 + 1 + 1 - 1 - 1 - 1 = 0 )
-    // Also all dual types have a net power of zero.
-    private final static Integer[] AIR =        { 1, 1, -1, -1, 1, 0, 0, 0, -1 };
-    private final static Integer[] DARK =       { 1, -1, 0, 0, 1, -1, 1, -1, 0 };
-    private final static Integer[] EARTH =      { 0, 1, 1, 1, 0, -1, -1, -1, 0 };
-    private final static Integer[] ELECTRIC =   { 0, 1, 0, -1, -1, 1, 0 ,1, -1 };
-    private final static Integer[] FIRE =       { 0, 1, -1, -1, 0, 1, 0, 1, -1 };
-    private final static Integer[] LIGHT =      { -1, 1, 1, 0, -1, 1, -1, 0, 0 };
-    private final static Integer[] NEUTRAL =    { 1, -1, -1, 0, -1, 0, 1, 1, 0 };
-    private final static Integer[] PLANT =      { 1, -1, 0, 0, 0, -1, -1, 1, 1 };
-    private final static Integer[] WATER =      { 0, -1, 1, -1, 0, 1, 1, -1, 0 };
-    // With the above type mapping:
-    // most Super Absorbs = 3 = FIRE/AIR
-    // most Absorbs = 5 = FIRE/LIGHT & AIR/DARK
-    // most Neutral = 7 = WATER/EARTH & LIGHT/DARK
-    // most Vulnerable = 4 = FIRE/AIR & WATER/AIR & PLANT/EARTH & EARTH/DARK
-    // most Super Vulnerable = 3 = FIRE/ELECTRIC
-    
+    // Also all dual types have a net power of zero.    
+    private final static Integer[] LIGHT =      { -1, -1, -1, 0, 0, 0, 1, 1, 1 };
+    private final static Integer[] ELECTRIC =   { 0, -1, 0, 1, 1, -1, 0, -1, 1 };
+    private final static Integer[] FIRE =       { 0, 0, -1, -1, 0, 1, -1, 1, 1 };
+    private final static Integer[] AIR =        { -1, 1, 1, -1, -1, 0, 1, 0, 0 }; 
+    private final static Integer[] NEUTRAL =    { 0, 1, -1, 1, 0, -1, -1, 1, 0 };
+    private final static Integer[] EARTH =      { 0, -1, 0, 1, -1, -1, 1, 1, 0 };
+    private final static Integer[] PLANT =      { -1, 0, 1, -1, 0, 0, 1, -1, 1 };
+    private final static Integer[] WATER =      { 1, 1, 0, -1, -1, 0, 1, -1, 0 };
+    private final static Integer[] DARK =       { 1, 1, 1, 0, 0 ,0 ,-1, -1, -1 };
+        
     // This enum map has each element as a key with its defense array as the value
     // With this if one wants to know how a WATER attack would affect fire type BMon do this:
     // TYPES.get(FIRE)[WATER.ordinal()];
