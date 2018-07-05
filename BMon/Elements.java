@@ -7,7 +7,7 @@ public enum Elements
 {   
     //Note that the ordinals of the types corresponds to their position type defense arrays
     //DO NOT CHANGE THE ORDER OF THESE ELEMENTS OR THE TYPE ARRAYS WILL BE WRONG
-    FIRE, WATER, PLANT, AIR, ELECTRIC, EARTH, LIGHT, DARK, NEUTRAL;
+    LIGHT, FIRE, AIR, WATER, NEUTRAL, ELECTRIC, PLANT, ROCK, DARK;
     
     // Supposedly every call to values() does a copy, as such making a fixed static array of that is lower overhead
     // and the static array will be used for getting other elements
