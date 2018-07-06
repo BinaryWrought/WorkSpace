@@ -1,6 +1,3 @@
-
-import java.util.Arrays;
-
 /**
  *
  * @author <a href="mailto:jhazelle@asu.edu">Justin Hazelle</a>
@@ -16,6 +13,5 @@ public class BMon
     {
         TypeMatchUps tmu = new TypeMatchUps();             
         tmu.printAllDualTypes( false );
-        tmu.potentDualTypes();
     }
 }
