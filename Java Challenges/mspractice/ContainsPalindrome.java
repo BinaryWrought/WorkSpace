@@ -1,3 +1,5 @@
+package mspractice;
+
 import java.util.*;
 
 /**
