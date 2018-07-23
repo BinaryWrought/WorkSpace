@@ -20,39 +20,17 @@ public class StringComparison
      * @param args 
      */
     public static void main( String[] args )
-    {
+    {        
         Scanner scanner = new Scanner( System.in );				//create a scanner object to get user input
         
         try									//this try block is to catch the inevitable exception caused by the user quitting 
         {
-            int t = scanner.nextInt();                                          //get the number of test cases
-            scanner.nextLine();
+            int t = scanner.nextInt();                                          //get the number of test cases            
             
             while( t > 0 )							//So long as there are more test cases
-            {         
-                String stringOne = scanner.next();
-                String stringTwo = scanner.next();
-                
-                if( stringOne.equals( stringTwo ) )                             //trivial case
-                {
-                    System.out.println( "0" );
-                }
-                else if( stringOne.length() > stringTwo.length() )
-                    System.out.println( "1" );
-                else if( stringOne.length() < stringTwo.length() )
-                    System.out.println( "-1" );
-                else
-                {
-                    int i = 0;
-                    while( stringOne.charAt( i ) == stringTwo.charAt( i ) && i < stringOne.length() && i < stringTwo.length() )
-                    {
-                        i++;
-                    }
-                    
-                    if( stringOne.charAt( i ) == 'n' )
-                    
-                        System.out.println("Nope");
-                }                
+            {      
+                scanner.nextLine();
+
                 
                 t--;								//get next test case		
             }
